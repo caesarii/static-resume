@@ -8,6 +8,9 @@ index.get('/', (request, response) => {
     response.render('interview/index.html')
 })
 
+index.get('/login', (request, response) => {
+    response.render('interview/index.html')
+})
 
 index.get('/email', (request, response) => {
     response.render('admin/email.html')

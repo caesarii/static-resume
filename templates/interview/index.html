@@ -6,9 +6,250 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登记表</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <style>
+        .main{
+            margin-left: 200px;
+        }
+    </style>
 </head>
 <body>
-<h1>interview.html</h1>
+<div class="container">
+    <ul class="layui-nav layui-nav-tree layui-nav-side">
+        <li class="layui-nav-item "><a href="">基本信息</a></li>
+        <li class="layui-nav-item"><a href="">个人概况</a></li>
+        <li class="layui-nav-item"><a href="">教育经历</a></li>
+        <li class="layui-nav-item"><a href="">培训经历</a></li>
+        <li class="layui-nav-item"><a href="">工作经历</a></li>
+        <li class="layui-nav-item"><a href="">家庭关系</a></li>
+        <li class="layui-nav-item"><a href="">性格</a></li>
+        <li class="layui-nav-item"><a href="">开放问题</a></li>
+        <li class="layui-nav-item"><a href="">其他</a></li>
+        <li class="layui-nav-item"><a href="">承诺书</a></li>
+    </ul>
+    <main class="main">
+       <header>二维火应聘人员登记表</header>
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">基本信息</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="应聘岗位" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input tool-item" id="id-apply-time" placeholder="应聘时间" >
 
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input tool-item" id="id-entry-time" placeholder="可到职时间" >
+
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">个人概况</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="sex" value="nan" title="男">
+                    <input type="radio" name="sex" value="nv" title="女" checked>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" class="layui-input tool-item" id="id-birth-time" placeholder="出生日期" >
+
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="身份证号码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="籍贯" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="户口所在地" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="民族" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="政治面貌" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="婚姻状况" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="生育状况" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="现住址" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="联系电话" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="E-mail" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="兴趣爱好" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="来往路程" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="身体状况" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="title" required  lay-verify="required" placeholder="奖惩记录" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">教育经历(从高中填起)</label>
+                <input type="text" name="title" required  lay-verify="required" placeholder="学校名称" autocomplete="off" class="layui-input">
+                <input type="text" class="layui-input tool-item" id="id-enrol-time" placeholder="开始时间" >
+                <input type="text" class="layui-input tool-item" id="id-graduate-time" placeholder="毕业时间" >
+                <input type="text" name="title" required  lay-verify="required" placeholder="专业" autocomplete="off" class="layui-input">
+                <input type="text" name="title" required  lay-verify="required" placeholder="学位" autocomplete="off" class="layui-input">
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">培训经历(请从最早的培训经历填起)</label>
+                <input type="text" name="title" required  lay-verify="required" placeholder="培训机构名称" autocomplete="off" class="layui-input">
+                <input type="text" class="layui-input tool-item" id="id-train-start-time" placeholder="开始时间" >
+                <input type="text" class="layui-input tool-item" id="id-train-end-time" placeholder="结束时间" >
+                <input type="text" name="title" required  lay-verify="required" placeholder="培训内容" autocomplete="off" class="layui-input">
+                <input type="text" name="title" required  lay-verify="required" placeholder="培训成果" autocomplete="off" class="layui-input">
+
+            </div>
+
+
+
+
+
+
+
+        </form>
+    </main>
+</div>
+
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="/static/layui/layui.js"></script>
+<script>
+    // 表单
+    layui.use('form', function(){
+        var form = layui.form;
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+        var element = layui.element;
+
+        //…
+    });
+
+    // 应聘日期
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#id-apply-time' //指定元素
+        });
+    });
+
+    // 可到职日期
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#id-entry-time' //指定元素
+        });
+    });
+
+    // 出生日期
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#id-birth-time' //指定元素
+        });
+    });
+
+    // 入学日期
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#id-enrol-time', //指定元素,
+            type: 'month'
+        });
+    });
+
+    // 毕业日期
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#id-graduate-time', //指定元素
+            type: 'month'
+        });
+    });
+
+</script>
 </body>
 </html>

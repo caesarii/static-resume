@@ -17,20 +17,14 @@ app.use(bodyParser.urlencoded({
     extended: true,
 }))
 
-// // 设置 session, 这里的 secretKey 是从 config.js 文件中拿到的
-// app.use(session({
-//     secret: secretKey,
-// }))
-
-// 配置 nunjucks 模板, 第一个参数是模板文件的路径
+//  nunjucks 模板
 nunjucks.configure('templates', {
     autoescape: true,
     express: app,
     noCache: true,
 })
 
-// 配置静态资源文件
-console.log(__dirname)
+// 静态资源文件
 const asset = __dirname + '/static'
 app.use('/static', express.static(asset))
 
@@ -41,7 +35,6 @@ app.use('/interview', interview)
 
 const run = (port=3000, host='') => {
     const server = app.listen(port, host, () => {
-        // 非常熟悉的方法
         const address = server.address()
         host = address.address
         port = address.port
@@ -49,11 +42,8 @@ const run = (port=3000, host='') => {
     })
 }
 
-
-
 if (require.main === module) {
     const port = 8008
-    // host 参数指定为 '0.0.0.0' 可以让别的机器访问你的代码
     const host = '127.0.0.1'
     run(port, host)
 }

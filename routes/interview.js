@@ -9,7 +9,7 @@ index.get('/', (request, response) => {
 })
 
 index.get('/login', (request, response) => {
-    response.render('interview/index.html')
+    response.render('interview/login.html')
 })
 
 index.get('/email', (request, response) => {

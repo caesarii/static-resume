@@ -1,0 +1,45 @@
+{
+  "code": "0",
+  "data": [
+  {
+    "id": 1,
+    "username": "qinhge",
+    "phone": "12345678900",
+    "email": "12345678@163.com",
+    "position": "engineer",
+    "time": "2015/5/5",
+    "state": "invited",
+    "operate_time": "2016"
+  },
+    {
+      "id": 1,
+      "username": "qinhge",
+      "phone": "12345678900",
+      "email": "12345678@163.com",
+      "position": "engineer",
+      "time": "2015/5/5",
+      "state": "invited",
+      "operate_time": "2017"
+    },
+    {
+      "id": 1,
+      "username": "qinhge",
+      "phone": "12345678900",
+      "email": "12345678@163.com",
+      "position": "engineer",
+      "time": "2015/5/5",
+      "state": "invited",
+      "operate_time": "2016"
+    },
+    {
+      "id": 1,
+      "username": "qinhge",
+      "phone": "12345678900",
+      "email": "12345678@163.com",
+      "position": "engineer",
+      "time": "2015/5/5",
+      "state": "invited",
+      "operate_time": "2016"
+    }
+  ]
+}

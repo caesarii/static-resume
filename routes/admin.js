@@ -13,11 +13,17 @@ index.get('/login', (request, response) => {
 })
 
 
+
+
 index.get('/email', (request, response) => {
     response.render('admin/email.html')
 })
 index.get('/note', (request, response) => {
     response.render('admin/note.html')
+})
+
+index.get('/test', (request, response) => {
+    response.render('admin/test.html')
 })
 
 module.exports = index

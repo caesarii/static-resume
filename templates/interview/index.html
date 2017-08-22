@@ -8,8 +8,54 @@
     <title>登记表</title>
     <link rel="stylesheet" href="/static/layui/css/layui.css">
     <style>
-        .main{
+        .body{
             margin-left: 200px;
+            background-color: rgb(213, 218, 219);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 66px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-bottom: 3px solid rgb(255, 255, 255);
+            z-index: 100;
+            padding-top: 14px;
+        }
+        .header-inner {
+            clear: both;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+        .header-logo {
+            width: 97px;
+            height: 35px;
+            background: url("../../static/img/logo.png") no-repeat 50%;
+            float: left;
+        }
+        .header-title {
+            float: left;
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            margin-left: 12px;
+            padding-left: 12px;
+            border-left: 3px solid rgb(211, 41, 25);
+        }
+        .main {
+            margin-top: 80px;
+        }
+        .main-inner {
+            margin-left: 10%;
+            margin-right: 10%;
+            padding: 2%;
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+            clear: both;
+        }
+        .side-nav {
+            top: 80px;
         }
         .panel {
             margin-left: 100px;
@@ -26,489 +72,500 @@
     </style>
 </head>
 <body>
+
+
+
+
 <div class="container">
-    <ul class="layui-nav layui-nav-tree layui-nav-side">
-        <li class="layui-nav-item "><a href="">基本信息</a></li>
-        <li class="layui-nav-item"><a href="">个人概况</a></li>
-        <li class="layui-nav-item"><a href="">教育经历</a></li>
-        <li class="layui-nav-item"><a href="">培训经历</a></li>
-        <li class="layui-nav-item"><a href="">工作经历</a></li>
-        <li class="layui-nav-item"><a href="">家庭关系</a></li>
-        <li class="layui-nav-item"><a href="">性格</a></li>
-        <li class="layui-nav-item"><a href="">开放问题</a></li>
-        <li class="layui-nav-item"><a href="">其他</a></li>
-        <li class="layui-nav-item"><a href="">承诺书</a></li>
-    </ul>
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-logo"></div>
+            <div class="header-title">应聘人员登记系统</div>
+        </div>
+    </header>
     <main class="main">
-        <header>二维火应聘人员登记表</header>
-        <form class="layui-form" action="">
+        <ul class="layui-nav layui-nav-tree layui-nav-side side-nav">
+            <li class="layui-nav-item "><a href="">基本信息</a></li>
+            <li class="layui-nav-item"><a href="">个人概况</a></li>
+            <li class="layui-nav-item"><a href="">教育经历</a></li>
+            <li class="layui-nav-item"><a href="">培训经历</a></li>
+            <li class="layui-nav-item"><a href="">工作经历</a></li>
+            <li class="layui-nav-item"><a href="">家庭关系</a></li>
+            <li class="layui-nav-item"><a href="">性格</a></li>
+            <li class="layui-nav-item"><a href="">开放问题</a></li>
+            <li class="layui-nav-item"><a href="">其他</a></li>
+            <li class="layui-nav-item"><a href="">承诺书</a></li>
+        </ul>
+        <main class="body">
+            <form class="layui-form" action="">
 
-            <section class="panel">
-                <header class="panel-header">基本信息</header>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">应聘岗位</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="应聘岗位" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <label class="layui-form-label">应聘时间</label>
-                        <div class="layui-input-inline" style="width: 100px;">
-                            <input type="text" class="layui-input tool-item" id="id-apply-time" placeholder="应聘时间" >
+                <section class="panel">
+                    <header class="panel-header">基本信息</header>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应聘岗位</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="应聘岗位" autocomplete="off" class="layui-input">
                         </div>
                     </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">可到职时间</label>
-                        <div class="layui-input-inline" style="width: 100px;">
-                            <input type="text" class="layui-input tool-item" id="id-entry-time" placeholder="可到职时间" >
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">应聘时间</label>
+                            <div class="layui-input-inline" style="width: 100px;">
+                                <input type="text" class="layui-input tool-item" id="id-apply-time" placeholder="应聘时间" >
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">可到职时间</label>
+                            <div class="layui-input-inline" style="width: 100px;">
+                                <input type="text" class="layui-input tool-item" id="id-entry-time" placeholder="可到职时间" >
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="panel">
-                <header class="panel-header">
-                    个人概况
-                </header>
-                <div class="layui-form-item">
-                    <div class="layui-inline">
+                <section class="panel">
+                    <header class="panel-header">
+                        个人概况
+                    </header>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">姓名</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">性别</label>
+                            <div class="layui-input-inline">
+                                <input type="radio" name="sex" value="nan" title="男">
+                                <input type="radio" name="sex" value="nv" title="女" checked>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">出生日期</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input tool-item" id="id-birth-time" placeholder="" >
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">身份证号码</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">籍贯</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">户口所在地</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">民族</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">政治面貌</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">婚姻状况</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">生育状况</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">现住址</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">联系电话</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">E-mail</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">兴趣爱好</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">来往路程</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">身体状况</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">奖惩记录</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="panel">
+                    <header class="panel-header">
+                        教育经历
+                    </header>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">学校名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">学校名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">开始时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input tool-item" id="id-enrol-time" placeholder="" >
+
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">毕业时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input tool-item" id="id-graduate-time" placeholder="" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">专业</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">学位</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <header class="panel-header">
+                        培训经历(请从最早的培训经历填起)
+                    </header>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">培训机构名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">开始时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input tool-item" id="id-train-start-time" placeholder="" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">结束时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input tool-item" id="id-train-end-time" placeholder="" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">培训内容</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="panel">
+                    <header class="panel-header">
+                        工作经历(请从参加工作填起到现在)
+                    </header>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">单位名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">就职时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input tool-item" id="id-work-start-time" placeholder="" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">离职时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input tool-item" id="id-work-end-time" placeholder="" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">职位</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">薪资</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">证明人</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">证明人联系方式</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">离职原因</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <header class="panel-header">
+                        主要家庭成员即社会关系(杭州)
+                    </header>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">关系</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
                         <label class="layui-form-label">姓名</label>
                         <div class="layui-input-inline">
                             <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-
                         </div>
                     </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">性别</label>
-                        <div class="layui-input-inline">
-                            <input type="radio" name="sex" value="nan" title="男">
-                            <input type="radio" name="sex" value="nv" title="女" checked>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <label class="layui-form-label">出生日期</label>
-                        <div class="layui-input-inline">
-                            <input type="text" class="layui-input tool-item" id="id-birth-time" placeholder="" >
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">身份证号码</label>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">年龄</label>
                         <div class="layui-input-inline">
                             <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
                         </div>
                     </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <label class="layui-form-label">籍贯</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">户口所在地</label>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">工作单位</label>
                         <div class="layui-input-inline">
                             <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
                         </div>
                     </div>
-                </div>
-
-
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <label class="layui-form-label">民族</label>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">职务</label>
                         <div class="layui-input-inline">
                             <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
                         </div>
                     </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">政治面貌</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <label class="layui-form-label">婚姻状况</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">生育状况</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <label class="layui-form-label">现住址</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <div class="layui-inline">
+                    <div class="layui-form-item">
                         <label class="layui-form-label">联系电话</label>
                         <div class="layui-input-inline">
                             <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
                         </div>
                     </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">E-mail</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                </div>
+                </section>
 
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <label class="layui-form-label">兴趣爱好</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">来往路程</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <div class="layui-inline">
-                        <label class="layui-form-label">身体状况</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">奖惩记录</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="panel">
-                <header class="panel-header">
-                    教育经历
-                </header>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">学校名称</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">学校名称</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">开始时间</label>
-                    <div class="layui-input-inline">
-                        <input type="text" class="layui-input tool-item" id="id-enrol-time" placeholder="" >
-
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">毕业时间</label>
-                    <div class="layui-input-inline">
-                        <input type="text" class="layui-input tool-item" id="id-graduate-time" placeholder="" >
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">专业</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">学位</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-            </section>
-
-            <section class="panel">
-                <header class="panel-header">
-                    培训经历(请从最早的培训经历填起)
-                </header>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">培训机构名称</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">开始时间</label>
-                    <div class="layui-input-inline">
-                        <input type="text" class="layui-input tool-item" id="id-train-start-time" placeholder="" >
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">结束时间</label>
-                    <div class="layui-input-inline">
-                        <input type="text" class="layui-input tool-item" id="id-train-end-time" placeholder="" >
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">培训内容</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-
-            </section>
-
-            <section class="panel">
-                <header class="panel-header">
-                    工作经历(请从参加工作填起到现在)
-                </header>
-
-                <div class="layui-form-item">
-                    <label class="layui-form-label">单位名称</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">就职时间</label>
-                    <div class="layui-input-inline">
-                        <input type="text" class="layui-input tool-item" id="id-work-start-time" placeholder="" >
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">离职时间</label>
-                    <div class="layui-input-inline">
-                        <input type="text" class="layui-input tool-item" id="id-work-end-time" placeholder="" >
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">职位</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">薪资</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">证明人</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">证明人联系方式</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <label class="layui-form-label">离职原因</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-            </section>
-
-            <section class="panel">
-                <header class="panel-header">
-                    主要家庭成员即社会关系(杭州)
-                </header>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">关系</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">姓名</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">年龄</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">工作单位</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">职务</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">联系电话</label>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-            </section>
-
-            <section class="panel">
-                <header class="panel-header">
-                    性格
-                </header>
-                <div class="layui-form-item">
-                    <input type="checkbox" name="like[write]" title="谨慎">
-                    <input type="checkbox" name="like[read]" title="乐观" checked>
-                    <input type="checkbox" name="like[dai]" title="发呆">
-                </div>
-            </section>
-
-            <section class="panel">
-                <header class="panel-header">
-                    开放问题
-                </header>
-                <!--开放问题-->
-                <div class="layui-form-item">
-                    <label class="layui-form-label" style="width: 200px;">您对本企业印象如何?</label>
-                    <textarea name="desc" placeholder="请控制在500字以内" class="layui-textarea"></textarea>
-                </div>
-
-                <div class="layui-form-item">
-                    <label class="layui-form-label" style="width: 200px;">您对本企业印象如何?</label>
-                    <textarea name="desc" placeholder="请控制在500字以内" class="layui-textarea"></textarea>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label" style="width: 200px;">您对本企业印象如何?</label>
-                    <textarea name="desc" placeholder="请控制在500字以内" class="layui-textarea"></textarea>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label" style="width: 200px;">您对本企业印象如何?</label>
-                    <textarea name="desc" placeholder="请控制在500字以内" class="layui-textarea"></textarea>
-                </div>
-            </section>
-
-            <!--其他-->
-            <section class="panel">
-                <header class="panel-header">
-                    其他
-                </header>
-                <div class="layui-form-item">
-                    <div style="overflow: hidden; ">
-                        <label class="layui-form-label" style="width: 200px;">您应聘本公司的主要目的(多选)</label>
-                    </div>
-                    <input type="checkbox" name="like[write]" title="职业">
-                    <input type="checkbox" name="like[read]" title="收入" checked>
-                    <input type="checkbox" name="like[dai]" title="交通环境">
-                    <br>
-                    <div class="layui-inline">
-                        <div class="layui-input-inline">
-                            <input type="checkbox" name="like[dai]" title="其他">
-                        </div>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="请注明" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sub-section">
-                    <header class="sub-header">目前收入</header>
+                <section class="panel">
+                    <header class="panel-header">
+                        性格
+                    </header>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">年收入(元)</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
+                        <input type="checkbox" name="like[write]" title="谨慎">
+                        <input type="checkbox" name="like[read]" title="乐观" checked>
+                        <input type="checkbox" name="like[dai]" title="发呆">
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <header class="panel-header">
+                        开放问题
+                    </header>
+                    <!--开放问题-->
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px;">您对本企业印象如何?</label>
+                        <textarea name="desc" placeholder="请控制在500字以内" class="layui-textarea"></textarea>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px;">您对本企业印象如何?</label>
+                        <textarea name="desc" placeholder="请控制在500字以内" class="layui-textarea"></textarea>
                     </div>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">固定工资(元)</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
+                        <label class="layui-form-label" style="width: 200px;">您对本企业印象如何?</label>
+                        <textarea name="desc" placeholder="请控制在500字以内" class="layui-textarea"></textarea>
                     </div>
-                </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label" style="width: 200px;">您对本企业印象如何?</label>
+                        <textarea name="desc" placeholder="请控制在500字以内" class="layui-textarea"></textarea>
+                    </div>
+                </section>
 
-                <div class="sub-section">
-                    <header class="sub-header">期望收入</header>
+                <!--其他-->
+                <section class="panel">
+                    <header class="panel-header">
+                        其他
+                    </header>
                     <div class="layui-form-item">
-                        <label class="layui-form-label">年收入(元)</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        <div style="overflow: hidden; ">
+                            <label class="layui-form-label" style="width: 200px;">您应聘本公司的主要目的(多选)</label>
+                        </div>
+                        <input type="checkbox" name="like[write]" title="职业">
+                        <input type="checkbox" name="like[read]" title="收入" checked>
+                        <input type="checkbox" name="like[dai]" title="交通环境">
+                        <br>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="like[dai]" title="其他">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="请注明" autocomplete="off" class="layui-input">
+                            </div>
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">固定工资(元)</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                </div>
 
-                <div class="sub-section">
-                    <header class="sub-header">最低薪资要求</header>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">年收入(元)</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                    <div class="sub-section">
+                        <header class="sub-header">目前收入</header>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">年收入(元)</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">固定工资(元)</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
                         </div>
                     </div>
-                    <div class="layui-form-item">
-                        <label class="layui-form-label">固定工资(元)</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section class="panel">
-                <header class="panel-header">
-                    承诺书
-                </header>
-                <main>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, praesentium?
-                </main>
-                <div class="layui-form-item">
+                    <div class="sub-section">
+                        <header class="sub-header">期望收入</header>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">年收入(元)</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">固定工资(元)</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub-section">
+                        <header class="sub-header">最低薪资要求</header>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">年收入(元)</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">固定工资(元)</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" required  lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <header class="panel-header">
+                        承诺书
+                    </header>
+                    <main>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, praesentium?
+                    </main>
+                    <div class="layui-form-item">
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <input type="radio" name="sex" value="同意" title="同意">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                            <input type="radio" name="sex" value="同意" title="同意">
+                            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
                         </div>
                     </div>
-                </div>
-
-                <div class="layui-form-item">
-                    <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
-                    </div>
-                </div>
-                <p>点击提交后方可生效，提交后课再次修改重新提交</p>
-            </section>
+                    <p>点击提交后方可生效，提交后课再次修改重新提交</p>
+                </section>
 
 
-        </form>
+            </form>
+        </main>
     </main>
 </div>
 

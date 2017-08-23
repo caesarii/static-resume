@@ -38,7 +38,7 @@ const run = (port=3000, host='') => {
         const address = server.address()
         host = address.address
         port = address.port
-        log(`listening server at http://${host}:${port}`)
+        // log(`listening server at http://${host}:${port}`)
     })
 }
 

@@ -67,7 +67,6 @@ body {
     width: 400px;
     padding-top: 10px;
 }
-
 .invite-modal {
     padding: 5px;
 }
@@ -76,7 +75,15 @@ body {
     padding: 20px;
 }
 
-
-
-
-
+.fr {
+    float: right;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.left {
+    text-align: left;
+}

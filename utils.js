@@ -23,10 +23,10 @@ const log = (...args) => {
     console.log.apply(console, arg)
 
     // log 出来的结果写入到文件中
-    // const content = t + ' ' + args + '\n'
-    // fs.writeFileSync('log.txt', content, {
-    //     flag: 'a',
-    // })
+    const content = t + ' ' + args + '\n'
+    fs.writeFileSync('log.txt', content, {
+        flag: 'a',
+    })
 }
 
 module.exports = {

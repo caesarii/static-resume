@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/layui/css/layui.css" media="all">
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+  <style>
+    body {
+      background-color: rgb(213, 218, 219);
+    }
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 66px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-bottom: 3px solid rgb(255, 255, 255);
+      z-index: 100;
+      padding-top: 14px;
+    }
+    .header-inner {
+      clear: both;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    .header-logo {
+      width: 97px;
+      height: 35px;
+      background: url("../../static/img/logo.png") no-repeat 50%;
+      float: left;
+    }
+    .header-title {
+      float: left;
+      font-size: 20px;
+      color: rgb(0, 0, 0);
+      margin-left: 12px;
+      padding-left: 12px;
+      border-left: 3px solid rgb(211, 41, 25);
+    }
+    .main {
+      margin-top: 80px;
+    }
+    .main-inner {
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 2%;
+      background-color: rgb(255, 255, 255);
+      overflow: hidden;
+      clear: both;
+    }
+     .text-div{
+        margin-top: 40px;
+        margin-left: 15%;
+        margin-right: 15%;
+        width: 70%;
+     }
+     .layui-textarea{
+          height: 800px;
+     }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-logo"></div>
+      <div class="header-title">简历管理系统</div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="main-inner">
+      <div class="text-div">
+  <textarea class="layui-textarea" id="LAY_demo1">
+    亲爱的<font color="red">张佩</font>：您好！诚挚地邀请您参加二维火的面试。</br></br>
+
+
+    面试时间：<font color="red">2017年8月13日 14：30</font></br>
+    面试地点：教工路552号二维火科技大厦</br>
+    面试职位：<font color="red">产品经理</font></br></br>
+
+    请您在面试前通过以下链接填写“应聘人员登记表”。</br>
+    账号为您的手机号；密码为：<font color="red">flj908。</font></br>
+    如果遇到问题，请回复邮件，谢谢。</br>
+    <a href="http://www.2dfire.net/resume">http://www.2dfire.net/resume</a> </br>
+
+    公司介绍</br>
+    专注餐饮和零售云收银，上万家门店成功实践。</br>
+    云计算、大数据、移动互联网、o2o</br>
+    我们追求创新</br>
+    我们崇尚变革</br>
+    我们更为颠覆而生！</br>
+    我们的梦想：搭建商家自己的o2o营销平台</br>
+    让天下没有难开的店！</br>
+    开店要用二维火，生意一定更红火</br></br>
+
+    我们是一家快速发展的O2O互联网创业公司，刚刚获得支付宝数亿元B轮融资，进入新一轮快速增长。</br>
+    研发与市场核心团队来自阿里巴巴、支付宝、Oracle、腾讯等公司。</br>
+    官网：<a href="http://www.2dfire.com">http://www.2dfire.com</a></br>
+    欢迎前往绿茶、新白鹿等店扫码点餐体验。</br></br>
+
+    我们将能提供：</br>
+    宽松的办公环境</br>
+    五险一金是必须的</br>
+    极具潜力的期权</br>
+    灵活的考勤方式</br>
+    足够多的水果和零食</br>
+    免费的咖啡和茶</br>
+    每年不少于一次旅游</br>
+    充分的学习机会（培训与分享）</br>
+    定期的运动日（篮球或其他）公司负责场地</br>
+    游戏机</br>
+    餐补</br>
+    报销所有职业书籍</br>
+    室内PM2.5小于50的清新空气</br>
+    年休假</br>
+    你要能扛得住：</br>
+    做为创业公司，加班是必然的，但是会有调休</br>
+    边做业务边改进架构的压力</br>
+    业务快速增长下，能力也要快速提升</br>
+
+  </textarea>
+      </div>
+      <div class="site-demo-button" style="margin-top: 40px; text-align: center;">
+        <button class="layui-btn site-demo-layedit" data-type="cancel" style="margin-right: 160px; width:160px">取消</button>
+        <button class="layui-btn site-demo-layedit" data-type="confirm" style=" width:160px">确认</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+
+
+
+<script src="/static/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use('layedit', function(){
+  var layedit = layui.layedit
+  ,$ = layui.jquery;
+
+  //构建一个默认的编辑器
+  var index = layedit.build('LAY_demo1',{height: 600});
+
+  //编辑器外部操作
+  var active = {
+    cancel: function(){
+      alert("取消"); //取消
+    }
+    ,confirm: function(){
+      alert(layedit.getText(index)); //确认
+    }
+  };
+
+  $('.site-demo-layedit').on('click', function(){
+    var type = $(this).data('type');
+    active[type] ? active[type].call(this) : '';
+  });
+
+});
+
+</script>
+
+</body>
+</html>

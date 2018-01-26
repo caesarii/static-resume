@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/css/basic.css">
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+
+<div id="particles-js"></div>
+<div class="container" >
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-logo"></div>
+            <div class="header-title">应聘人员登记系统</div>
+        </div>
+    </header>
+    <main class="main" >
+        <div class="login-logo"></div>
+        <form class="layui-form login-box" action="" method="post" lay-filter="login">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="text-align: left; width: 60px;">用户名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="username" required  lay-verify="required|phone" placeholder="请输入" autocomplete="on" class="layui-input">
+
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="text-align: left; width: 60px;">密码</label>
+                <div class="layui-input-block">
+                    <input type="text" name="password" required  lay-verify="required" placeholder="请输入" autocomplete="on" class="layui-input">
+                </div>
+            </div>
+
+            <button class="layui-btn login-btn" lay-submit lay-filter="login">登录</button>
+        </form>
+    </main>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="/static/js/particles.min.js"></script>
+<script src="/static/layui/layui.js"></script>
+<script src="/static/js/index.js"></script>
+<script src="/static/js/nunjucks.js"></script>
+<script>
+
+
+    particlesJS.load('particles-js', '/static/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+
+    var success = function(data) {
+        var code = data.code
+        if(code) {
+            window.location.href = ''
+        } else {
+            // 插入错误提示
+            nunjucks.configure('/static/templates', {autoescape: true})
+            nunjucks.render('login.html', {
+                'name': 'qinghe'
+            }, function(err, res) {
+                document.body.insertAdjacentHTML('beforeend', res)
+                $('.login-box').append(res)
+            })
+        }
+    }
+
+    // 表单提交
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(login)', function(data){
+            console.log('submit', data)
+            layer.msg(JSON.stringify(data.field));
+            $.ajax({
+                type: 'post',
+                url: '/user/login',
+                data: data.field,
+                success: success
+            })
+            return false;
+        });
+    });
+
+
+</script>
+</body>
+</html>

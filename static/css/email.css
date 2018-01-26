@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(213, 218, 219);
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    z-index: 100;
+    padding-top: 14px;
+}
+.header-inner {
+    clear: both;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.header-logo {
+    width: 97px;
+    height: 35px;
+    background: url("../../static/img/logo.png") no-repeat 50%;
+    float: left;
+}
+.header-title {
+    float: left;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 3px solid rgb(211, 41, 25);
+}
+.main {
+    margin-top: 80px;
+}
+.main-inner {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2%;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    clear: both;
+}
+.text-div{
+    margin-top: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+.layui-textarea{
+    height: 800px;
+}
+
+.red {
+    color: red;
+}

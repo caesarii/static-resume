@@ -1,0 +1,102 @@
+{
+  "employeeBaseInfoVO": {
+    "address": "浙江长兴",
+    "birthday": 1503626040749,
+    "email": "1097427@qq.com",
+    "gender": 8,
+    "hobbies": "睡觉",
+    "huKou": "7777",
+    "iDNumber": "5002363636363636633",
+    "maritalStatus": "啥几分就看",
+    "medicalHistory": "身体棒棒的",
+    "mobile": "123456789",
+    "name": "竹木",
+    "nationality": "党员",
+    "nativePlace": "四攒",
+    "policitalStatus": "党员",
+    "procreationStatus": "啦啦啦",
+    "rewardRecord": "哈哈哈",
+    "thoroughfare": "啦啦啦"
+  },
+  "openProblemVO": {
+    "careerPlanning": "不知道",
+    "image": "没理想",
+    "myLife": "长得帅",
+    "platform": "没平台"
+  },
+  "othersVO": {
+    "currentIncomeM": "8888",
+    "currentIncomeY": "88888",
+    "expectedIncomeM": "99999",
+    "expectedIncomeY": "888958",
+    "mixIncomeM": "8888888",
+    "mixIncomeY": "8888888",
+    "otherRes": "哈哈哈",
+    "target": "环境好"
+  },
+  "resumeMainVO": {
+    "applicationDate": 1503626040746,
+    "arrivalDate": 1503626040746,
+    "position": "java开发",
+    "registerId": "dfb6eb952aac4e05b96b639ad3bff845",
+    "url": "http:"
+  },
+  "schoolExperienceVOs": [
+    {
+      "code": "EXPERIENCE_CODE_001",
+      "endTime": 1503626040747,
+      "schoolVO": {
+        "academicDegree": "学士学位",
+        "major": "软件",
+        "schoolName": "浙江工业大学"
+      },
+      "startTime": 1503626040747
+    }
+  ],
+  "socialRelationVOS": [
+    {
+      "age": 18,
+      "company": "长兴",
+      "createTime": 0,
+      "lastVer": 0,
+      "name": "竹木",
+      "opTime": 0,
+      "phone": "666699999",
+      "position": "web",
+      "relation": "老夫",
+      "valid": 0
+    }
+  ],
+  "tempers": [
+    1,
+    2,
+    3
+  ],
+  "trainExperienceVOs": [
+    {
+      "code": "EXPERIENCE_CODE_002",
+      "endTime": 1503626040748,
+      "startTime": 1503626040748,
+      "traninVO": {
+        "trainContent": "完",
+        "trainName": "三亚",
+        "trainResult": "很好玩"
+      }
+    }
+  ],
+  "workExperienceVOs": [
+    {
+      "code": "EXPERIENCE_CODE_003",
+      "endTime": 1503626040749,
+      "startTime": 1503626040749,
+      "workVO": {
+        "companyName": "二维火公司",
+        "leaveReason": "长得丑",
+        "position": "java开工程师",
+        "salary": "100000",
+        "witness": "哈哈哈",
+        "witnessPhone": "123456789"
+      }
+    }
+  ]
+}
